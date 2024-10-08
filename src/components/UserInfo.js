@@ -9,16 +9,13 @@ const UserInfo = () => {
 
   const handleSignOut = () => {
     signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        navigate("/");
-      })
+      .then(() => {})
       .catch((error) => {
         navigate("/error");
       });
   };
   return (
-    <div className="bg-inherit text-red-400 p-1 text-sm  rounded-lg">
+    <div className="text-red-400 text-sm  rounded-lg">
       <p className="font-bold">Name : {user?.displayName}</p>
       {/* <p>Email : {user?.email}</p> */}
       <button
